@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifa Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shifa Tahreem</h1>
+    <p>Web Developer | Designer | Programmer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am Shifa Tahreem, a 3rd-year Computer Science student with a strong interest in web development, 
+        data science, and emerging technologies. My work focuses on creating practical, efficient, 
+        and user-friendly solutions through hands-on projects and internships.
+    </p>
+    <p>
+        I have experience in HTML, CSS, JavaScript, Python, and machine learning tools, 
+        and I am currently expanding my expertise in IoT applications and optimization techniques.
+    </p>
+    <p>
+        My goal is to build innovative solutions that solve real-world problems 
+        while continuously improving my technical and professional skills.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li>
+            <p><strong>Project 1 – DATA-PIPELINE DEVELOPMENT</strong></p>
+            <p>LINK: <a href="https://github.com/ShifaTahreem/DATA-PIPELINE-DEVELOPMENT" target="_blank">
+                GitHub Repository</a></p>
+            <p>
+                ABOUT: The objective of this project was to simulate a real-world data engineering scenario 
+                where raw data needs to be cleaned, processed, and stored in a usable format for analysis 
+                or machine learning. The ETL process is crucial in almost all data-related workflows — 
+                whether in data science, machine learning, or business intelligence.
+            </p>
+        </li>
+        <li>
+            <p><strong>Project 2 – HOUSE PRICE PREDICTION</strong></p>
+            <p>LINK: <a href="https://github.com/ShifaTahreem/house-price-prediction" target="_blank">
+                GitHub Repository</a></p>
+            <p>
+                ABOUT: House price prediction is a common real-world use case in the domain of machine learning, 
+                especially in the real estate sector. This project demonstrates how raw data can be transformed 
+                into an intelligent system that can provide instant predictions using a machine learning model 
+                hosted through a web application.
+            </p>
+        </li>
+    </ul>
+</section>
+
+<section id="skills-interests">
+    <h2>Skills & Interests</h2>
+
+    <h3>Skills</h3>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <span>💻</span>
+            <p>Python Programming</p>
+        </div>
+        <div class="skill-card">
+            <span>🌐</span>
+            <p>Web Development (HTML, CSS, JavaScript)</p>
+        </div>
+        <div class="skill-card">
+            <span>📊</span>
+            <p>Data Analysis (Pandas, NumPy, Matplotlib)</p>
+        </div>
+    </div>
+
+    <h3>Interests</h3>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <span>🤖</span>
+            <p>Machine Learning</p>
+        </div>
+        <div class="skill-card">
+            <span>📱</span>
+            <p>IoT Applications</p>
+        </div>
+        <div class="skill-card">
+            <span>🧩</span>
+            <p>Problem Solving</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:shifatahreem05@gmail.com">shifatahreem05@gmail.com</a></p>
+    <p>GitHub Profile: 
+        <a href="https://github.com/ShifaTahreem" target="_blank">https://github.com/ShifaTahreem</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 Shifa Tahreem. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener("scroll", () => {
+        document.querySelectorAll("section").forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                sec.classList.add("show");
+            }
+        });
+
+        const topBtn = document.getElementById("backToTop");
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+
+        document.querySelectorAll(".skill-fill").forEach(bar => {
+            const rect = bar.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                bar.style.width = bar.dataset.width;
+            }
+        });
+    });
+
+    document.getElementById("backToTop").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+<!-- Back to Top Button -->
+<button id="backToTop">↑</button>
+
+<script>
+    const topBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    });
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+</body>
+</html>
